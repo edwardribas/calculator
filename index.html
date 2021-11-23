@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Metas -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links -->
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="shortcut icon" href="assets/imgs/icon.png">
+    <script src="https://kit.fontawesome.com/932eb47ff0.js" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;800;900&display=swap" rel="stylesheet">
+
+    <title>Edward - Calculator</title>
+</head>
+<body>
+    <!-- Sidebar -->
+    <nav>
+        <!-- Desktop Logo-->
+        <a class="logo desk" href="#"><h1>er</h1></a>
+        <ul>
+            <li><a href="#aboutme"><i class="fas fa-user"></i></a></li>
+            <li><a href="#calculator"><i class="fas fa-calculator"></i></a></li>
+            <div id="toggle-mode">
+                <li id="moon"><a><i class="fa-solid fa-moon"></i></a></li>
+                <li id="sun"><a><i class="fa-solid fa-sun"></i></a></li>
+            </div>
+
+        </ul>
+    </nav>
+
+    <!-- About me -->
+    <section id="aboutme">
+        <div id="about">
+            <span>Hey! My name is</span>
+            <h1>Eduardo Ribas</h1></div>
+        <div id="desc">
+            <p>This is one of my first projects in JavaScript. </p>
+            <p>Just a simple calculator :)</p>
+            <ul id="social">
+                <li><a href="https://github.com/edwardribas/" target="_blank"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.instagram.com/edwardb.as/" target="_blank"><i class="fab fa-instagram"></i></a></li></li>
+            </ul>
+            <a href="#calculator" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Calculator -->
+    <section id="calculator">
+        <h1>Making it work</h1>
+        <p>Insert the numbers, choose your operation and submit your values.</p>
+        
+        <form method="get" action="#">
+            <input class="numbers" id="n1" type="number" placeholder="First number" autocomplete="off">
+            <input class="numbers" id="n2" type="number" placeholder="Second number">
+            <select id="operator" placeholder="Select your operation">
+                <option value="1">Sum</option>
+                <option value="2">Subtraction</option>
+                <option value="3">Multiplication</option>
+                <option value="4">Division</option>
+                <option value="5">Percentage</option>
+                <option value="6">Increase</option>
+                <option value="7">Discount</option>
+            </select>
+            <div id="result">...</div>
+            <input type="submit" value="Submit">
+        </form>
+        
+    </section>
+
+    <!-- Page footer -->
+    <footer>
+        <a target="_blank" href="https://github.com/edwardribas/">github.com/edwardribas</a>
+    </footer>
+
+    <!-- Script -->
+    <script src="assets/script.js"></script>
+</body>
+</html>
