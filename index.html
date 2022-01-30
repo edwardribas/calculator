@@ -4,77 +4,84 @@
     <!-- Metas -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- Links -->
     <link rel="stylesheet" href="assets/style.css">
     <link rel="shortcut icon" href="assets/imgs/icon.png">
+    
+    <!-- Bootstrap and Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href='https://unpkg.com/css.gg/icons/all.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/932eb47ff0.js" crossorigin="anonymous"></script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;800;900&display=swap" rel="stylesheet">
 
     <title>Edward - Calculator</title>
 </head>
 <body>
-    <!-- Sidebar -->
-    <nav>
-        <!-- Desktop Logo-->
-        <a class="logo desk" href="#"><h1>er</h1></a>
-        <ul>
-            <li><a href="#aboutme"><i class="fas fa-user"></i></a></li>
-            <li><a href="#calculator"><i class="fas fa-calculator"></i></a></li>
-            <div id="toggle-mode">
-                <li id="moon"><a><i class="fa-solid fa-moon"></i></a></li>
-                <li id="sun"><a><i class="fa-solid fa-sun"></i></a></li>
+    <!-- Hero -->
+    <div class="container-fluid" id="hero">
+        <div class="container p-2"> 
+            <div class="row p-0 m-0">
+                <div class="col-lg d-flex flex-column justify-content-center">
+                    <h1 class="fs-3 ">Calculator</h1>
+                    <p>Uma calculadora simples.</p>
+                    <p>Espero que possa vir a ser útil de alguma forma.</p>
+                    <a href="#calculator" class="d-flex gap-2"><i class="gg-mouse"></i> Começar</a>
+                </div>
+                <div class="col-lg text-center desktop">
+                    <img src="assets/imgs/devices.svg" alt="Imagem com diferentes tipos de dispositivos.">
+                </div>
             </div>
-
-        </ul>
-    </nav>
-
-    <!-- About me -->
-    <section id="aboutme">
-        <div id="about">
-            <span>Hey! My name is</span>
-            <h1>Eduardo Ribas</h1></div>
-        <div id="desc">
-            <p>This is one of my first projects in JavaScript. </p>
-            <p>Just a simple calculator :)</p>
-            <ul id="social">
-                <li><a href="https://github.com/edwardribas/" target="_blank"><i class="fab fa-github"></i></a></li>
-                <li><a href="https://www.instagram.com/edwardb.as/" target="_blank"><i class="fab fa-instagram"></i></a></li></li>
-            </ul>
-            <a href="#calculator" class="btn">Get Started</a>
         </div>
-    </section>
+    </div>
 
-    <!-- Calculator -->
-    <section id="calculator">
-        <h1>Making it work</h1>
-        <p>Insert the numbers, choose your operation and submit your values.</p>
-        
-        <form method="get" action="#">
-            <input class="numbers" id="n1" type="number" placeholder="First number" autocomplete="off">
-            <input class="numbers" id="n2" type="number" placeholder="Second number">
-            <select id="operator" placeholder="Select your operation">
-                <option value="1">Sum</option>
-                <option value="2">Subtraction</option>
-                <option value="3">Multiplication</option>
-                <option value="4">Division</option>
-                <option value="5">Percentage</option>
-                <option value="6">Increase</option>
-                <option value="7">Discount</option>
-            </select>
-            <div id="result">...</div>
-            <input type="submit" value="Submit">
-        </form>
-        
-    </section>
+    <!-- Application -->
+    <div class="container-fluid shapebg">
+        <div class="container" id="calculator">
+            <div class="row p-0 m-0">
+                <!-- Imagem -->
+                <div class="col-md p-4 img d-flex">
+                    <img src="assets/imgs/studying.svg" alt="Garota estudando um livro">
+                </div>
+                <!-- Formulário -->
+                <div class="col-lg p-4 d-flex flex-column justify-content-center align-items-center">
+                    <form method="get" action="#">
+                        <input class="numbers" type="number" step=any placeholder="1º núm." autocomplete="off">
+                        <input class="numbers" type="number" step=any placeholder="2º núm." autocomplete="off">
+                        <select id="operator">
+                            <optgroup label="Básicos">
+                                <option value="1">Soma</option>
+                                <option value="2">Subtração</option>
+                                <option value="3">Multiplicação</option>
+                                <option value="4">Divisão</option>
+                            </optgroup>
+                            <optgroup label="Porcentagem">
+                                <option value="5">Porcentagem</option>
+                                <option value="6">Acréscimo</option>
+                                <option value="7">Desconto</option>
+                            </optgroup>
+                        </select>
+                        <div id="result">...</div>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!-- Page footer -->
-    <footer>
-        <a target="_blank" href="https://github.com/edwardribas/">github.com/edwardribas</a>
+    <!-- Footer -->
+    <footer class="w-100 h-25 text-center p-4">
+        <h1 class="m-0">That's it!</h1>
+        <p class="m-0 mb-2">Espero que tenha curtido!</p>
+        <div class="d-flex gap-4 justify-content-center branding">
+            <a href="https://twitter.com/edwardb_as" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://github.com/edwardribas" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/edwardb.as/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
     </footer>
 
     <!-- Script -->
