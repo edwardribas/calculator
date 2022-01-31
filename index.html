@@ -18,10 +18,13 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Shapes: https://haikei.app/ | Illustrations: https://undraw.co/illustrations -->
 
     <title>Edward - Calculator</title>
 </head>
 <body>
+    
     <!-- Hero -->
     <div class="container-fluid" id="hero">
         <div class="container p-2"> 
@@ -31,6 +34,7 @@
                     <p>Uma calculadora simples.</p>
                     <p>Espero que possa vir a ser útil de alguma forma.</p>
                     <a href="#calculator" class="d-flex gap-2"><i class="gg-mouse"></i> Começar</a>
+                    
                 </div>
                 <div class="col-lg text-center desktop">
                     <img src="assets/imgs/devices.svg" alt="Imagem com diferentes tipos de dispositivos.">
@@ -40,8 +44,8 @@
     </div>
 
     <!-- Application -->
-    <div class="container-fluid shapebg">
-        <div class="container" id="calculator">
+    <div class="container-fluid" id="calculator">
+        <div class="container" >
             <div class="row p-0 m-0">
                 <!-- Imagem -->
                 <div class="col-md p-4 img d-flex">
@@ -49,6 +53,7 @@
                 </div>
                 <!-- Formulário -->
                 <div class="col-lg p-4 d-flex flex-column justify-content-center align-items-center">
+                    <h1 class="fs-4 m-0 mb-4">Aplicação</h1>
                     <form method="get" action="#">
                         <input class="numbers" type="number" step=any placeholder="1º núm." autocomplete="off">
                         <input class="numbers" type="number" step=any placeholder="2º núm." autocomplete="off">
@@ -65,16 +70,22 @@
                                 <option value="7">Desconto</option>
                             </optgroup>
                         </select>
-                        <div id="result">...</div>
-                        <input type="submit" value="Submit">
+                        <div id="result">
+                            <p class="m-0 p-0 text-left">...</p>
+                            <button id="clipboard"><i class="fa-solid fa-clipboard"></i></button>
+                        </div>
+                        <input type="submit" value="Calcular">
                     </form>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Waves -->
+    <div class="container-fluid p-0 m-0 waves"></div>
+
     <!-- Footer -->
-    <footer class="w-100 h-25 text-center p-4">
+    <footer class="w-100 text-center p-4">
         <h1 class="m-0">That's it!</h1>
         <p class="m-0 mb-2">Espero que tenha curtido!</p>
         <div class="d-flex gap-4 justify-content-center branding">
