@@ -26,7 +26,7 @@ img, a, #calculator h1, form{
 
 /* Hero */
 #hero{
-    background-color: rgb(91, 231, 138);
+    background-color: #5be78a;
     padding: 150px 0;
 }
 #hero h1, p{
@@ -64,18 +64,19 @@ img, a, #calculator h1, form{
 
 /* Calculator */
 #calculator{
-    padding: 180px 0 230px;
+    padding: 200px 0 260px;
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(./imgs/waves2.svg);
+    background-color: rgb(255, 255, 255);
 }
 #calculator h1{
     font-family: 'Outfit', sans-serif;
 }
 #calculator img{
-    width: 80%;
-    max-width: 450px;
+    width: 85%;
+    max-width: 600px;
 }
 
 /* Form */
@@ -85,13 +86,13 @@ form{
     text-align: center;
 }
 form input[type=number]{
-    background-color: rgb(247, 247, 247);
+    background-color: rgb(245, 245, 245);
     width: 49%;
     padding: 8px 18px;
     font: 300 1rem 'Outfit', sans-serif !important;
     outline: none;
     border: 1px solid transparent;
-    border-radius: 50px;
+    border-radius: 20px;
     transition: border .2s, background-color .2s ease;
 }
 form input.error{
@@ -104,6 +105,8 @@ form input::-webkit-inner-spin-button, form input::-webkit-outer-spin-button{
     appearance: none;
 }
 form select{
+    cursor: pointer;
+    appearance: none;
     width: 100%;
     padding: 8px 18px;
     margin-top: 10px;
@@ -111,40 +114,45 @@ form select{
     outline: none;
     font: 300 1rem 'Outfit', sans-serif !important;
     border: 1px solid transparent;
-    border-radius: 50px;
-    background-color: rgb(247, 247, 247);
+    border-radius: 200px;
+    background-color: rgb(245, 245, 245);
 }
 #result{
     position: relative;
     margin: 10px 0 30px;
     width: 100%;
-    padding: 15px 50px 15px 20px !important;
-    background-color: rgb(247, 247, 247);
-    border-radius: 15px;
+    padding: 15px 20px !important;
+    background-color: rgb(245, 245, 245);
+    border-radius: 25px;
 }
 #result p{
     letter-spacing: 1px;
     font: 400 .9rem 'Outfit', sans-serif !important;
-    color: rgb(83, 83, 83);
-    text-align: left !important;
+    color: rgb(105, 105, 105);  
 }
-#result button{
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    border: none;
-    outline: none;
+
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.buttons #clipboard{
+
+    
+    border: 2px solid rgb(91, 231, 138);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 10px 12px;
+    cursor: pointer;
     background-color: rgb(91, 231, 138);
-    color: rgb(24, 24, 24);
-    font-size: 1.2rem;
-    padding: 3px 8px;
-    border-radius: 8px;
-    font-family: 'Outfit', sans-serif;
-    transition: transform .3s ease;
+    transition: background-color .2s ease, color .2s ease;
 }
-#result button:active{
-    transform: scale(.85) translateY(-50%);
+.buttons #clipboard:hover{
+    
+    background-color: white;
+    color: rgb(91, 231, 138)
 }
 form input[type=submit]{
     border: 2px solid rgb(91, 231, 138);
@@ -162,7 +170,9 @@ form input[type=submit]:hover{
 
 /* Waves */
 .waves{
-    transform: translateY(1px);
+    position: absolute;
+    bottom: calc(100% - 1px);
+    left: 0;
     height: 85px !important;
     background-image: url(./imgs/waves.svg);
     background-position: bottom;
@@ -172,7 +182,9 @@ form input[type=submit]:hover{
 
 /* Footer */
 footer{
-    background: rgb(91, 231, 138);
+    position: relative;
+    
+    background-color: rgb(91, 231, 138);
 }
 footer h1{
     font: 700 1.5rem 'Montserrat', sans-serif
@@ -220,10 +232,13 @@ footer .branding i:hover{
     #hero a{
         margin: 0 auto 50px;
     }
+    #calculator img{
+        max-width: 450px !important;
+    }
     #calculator .img{
         justify-content: center;
     }
     #calculator{
-        padding: 110px 0 80px;
+        padding: 110px 0 145px;
     }
 }
