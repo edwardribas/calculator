@@ -40,7 +40,7 @@ form.onsubmit = e => {
             switch (value){
                 case "1": //sum
                     operation = " somado a ";
-                    result = num1+num2;
+                    result = ((num1 * 100) + (num2 * 100)) / 100;
                     break;
 
                 case "2": // subtraction
@@ -61,7 +61,7 @@ form.onsubmit = e => {
                     result = percentage;
                     break;
                 case "6": // increase
-                    result = num2+percentage;
+                    result = ((num2 * 100) + (percentage * 100)) / 100;
                     operation = "% de acréscimo sobre ";
                     break;
                 case "7": // discount
